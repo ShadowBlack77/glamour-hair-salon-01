@@ -1,0 +1,88 @@
+#header-desc {
+  position: relative;
+  width: 55vw;
+  padding-top: 10rem;
+
+  #header-desc-head {
+    width: 70%;
+    h1 {
+      color: white;
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 70px;
+    }
+  }
+
+  #header-desc-content {
+    padding: 2rem 0;
+    p {
+      color: white;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  #header-desc-btn {
+    button {
+      background-color: white;
+      border-radius: 10px;
+      padding: .7rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #header-desc {
+    width: 70vw;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #header-desc {
+    width: 100%;
+    padding: 2rem;
+    #header-desc-head {
+      h1 {
+        font-size: 3rem;
+      }
+    }
+
+    #header-desc-content {
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    #header-desc-btn {
+      button {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #header-desc {
+    width: 100%;
+    #header-desc-head {
+      h1 {
+        font-size: 3rem;
+        line-height: 60px;
+      }
+    }
+
+    #header-desc-content {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    #header-desc-btn {
+      button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+#about-us-wrapper {
+  background-image: linear-gradient(#1f1f1f, #2e2e2e);
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem 0;
+
+  #about-us {
+    width: 100%;
+    padding: 0 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    #about-us-image {
+      width: 600px;
+      height: 600px;
+      background-image: url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyNjI5NjF8MHwxfHNlYXJjaHwyfHxIYWlyJTIwU2Fsb258ZW58MHx8fHwxNzEwNzIxOTcwfDA&ixlib=rb-4.0.3&q=80&w=1080');
+      background-size: cover;
+      border-radius: 16px;
+    }
+  
+    #about-us-desc {
+      width: 50%;
+
+      #about-us-header {
+        h2 {
+          font-size: 3rem;
+          font-weight: bold;
+          color: white;
+        }
+      }
+
+      #about-us-content {
+        p {
+          color: white;
+          font-size: 1.2rem;
+          padding: 1rem 0;
+        }
+      }
+
+      #about-us-btn {
+        padding-top: 1rem;
+
+        button {
+          background-color: white;
+          border-radius: 10px;
+          padding: .7rem 1.5rem;
+          font-size: 1.1rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1630px) {
+  #about-us-wrapper {
+    #about-us {
+      padding: 0 6rem;
+      #about-us-desc {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #about-us-wrapper {
+    padding: 0rem 0rem 10rem 0rem;
+
+    #about-us {
+      padding: 0 6rem;
+      justify-content: center;
+      #about-us-desc {
+        padding-top: 5rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  #about-us-wrapper {
+    #about-us {
+      padding: 0 2rem;
+      justify-content: center;
+
+      #about-us-image {
+        width: 100%;
+        height: 425px;
+      }
+
+      #about-us-desc {
+        padding-top: 5rem;
+        width: 100%;
+      }
+    }
+  }
+}

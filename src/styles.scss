@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('./app/styles/variables.scss');
+@import url('./app/styles/responsiv.scss');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cardo", serif;
+}
+
+// .swiper-slide-prev {
+//   filter: blur(8px);
+// }
+
+// .swiper-slide-active {
+//   filter: blur(8px);
+// }
+
+// .swiper-slide-next {
+//   filter: blur(0px);
+// }
+
+// .cardo-regular {
+//   font-family: "Cardo", serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .cardo-bold {
+//   font-family: "Cardo", serif;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// .cardo-regular-italic {
+//   font-family: "Cardo", serif;
+//   font-weight: 400;
+//   font-style: italic;
+// }
