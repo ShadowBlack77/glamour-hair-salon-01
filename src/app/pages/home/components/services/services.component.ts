@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-services',
@@ -63,7 +63,7 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
     ])
   ]
 })
-export class ServicesComponent {
+export class ServicesComponent implements AfterViewInit {
   @ViewChild('serviceHeader') serviceHeader!: ElementRef;
 
   serviceOneAnimationState: string = 'start';
@@ -92,8 +92,7 @@ export class ServicesComponent {
     this.checkIfTheServicesAreInViewport();
   }
 
-  @HostListener('window:load')
-  onLoad(): void {
+  ngAfterViewInit(): void {
     this.checkIfTheServicesAreInViewport();
   }
 }

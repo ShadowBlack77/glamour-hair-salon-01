@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-about-us',
@@ -24,7 +24,7 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
     ])
   ]
 })
-export class AboutUsComponent {
+export class AboutUsComponent implements AfterViewInit {
   @ViewChild('aboutElement') aboutElement!: ElementRef;
 
   aboutAnimationState: string = 'start';
@@ -33,7 +33,7 @@ export class AboutUsComponent {
     const element = this.aboutElement.nativeElement;
     const rect = element.getBoundingClientRect();
 
-    if (responsive > 1024) {
+    if (responsive > 1192) {
       const isInViewport = 
       rect.top >= 0 &&
       rect.left >= 0 &&
@@ -43,15 +43,11 @@ export class AboutUsComponent {
       if (isInViewport) {
         this.aboutAnimationState = 'end';
       }
-    } else if (responsive <= 1024 && responsive > 320) {
+    } else if (responsive <= 1192 && responsive > 320) {
       const isInViewport = 
       rect.top >= -500 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight + 300 || document.documentElement.clientHeight + 300) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-
-      console.log(isInViewport);
-      
+      rect.bottom <= (window.innerHeight + 300 || document.documentElement.clientHeight + 300);
 
       if (isInViewport) {
         this.aboutAnimationState = 'end';
@@ -74,8 +70,7 @@ export class AboutUsComponent {
     this.checkIfTheAboutIsInViewport(window.innerWidth);
   }
 
-  @HostListener('window:load', ['$event'])
-  onLoad(event: any): void {
+  ngAfterViewInit(): void {
     this.checkIfTheAboutIsInViewport(window.innerWidth);
   }
 

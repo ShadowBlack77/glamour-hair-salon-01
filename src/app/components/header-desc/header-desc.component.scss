@@ -39,6 +39,12 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  #header-desc {
+    padding-bottom: 2rem;
+  }
+}
+
 @media only screen and (max-width: 690px) {
   #header-desc {
     width: 100%;

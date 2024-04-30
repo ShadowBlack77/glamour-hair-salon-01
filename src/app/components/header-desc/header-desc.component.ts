@@ -37,9 +37,7 @@ export class HeaderDescComponent {
 
     const isInViewport = 
       rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth);
-    
+      rect.left >= 0
     if (isInViewport) {
       this.animationState = 'end';
     }
