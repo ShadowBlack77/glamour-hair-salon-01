@@ -1,9 +1,9 @@
 <div id="services">
-  <div id="services-header">
+  <div id="services-header" #serviceHeader>
     <h2>My services</h2>
   </div>
   <div id="services-content">
-    <div class="service">
+    <div class="service" [@serviceOneAnimations]="serviceOneAnimationState">
       <div class="service-desc">
         <h3>Haircut and Styling</h3>
         <p>
@@ -11,7 +11,7 @@
         </p>
       </div>
     </div>
-    <div class="service">
+    <div class="service" [@serviceTwoAnimations]="serviceTwoAnimationState">
       <div class="service-desc">
         <h3>Hair Coloring</h3>
         <p>
@@ -19,7 +19,7 @@
         </p>
       </div>
     </div>
-    <div class="service">
+    <div class="service" [@serviceThreeAnimations]="serviceThreeAnimationState">
       <div class="service-desc">
         <h3>Hair Treatment</h3>
         <p>

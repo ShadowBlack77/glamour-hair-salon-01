@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, Input, ViewChild, CUSTOM_ELEMENTS_SCHEMA, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, ViewChild, CUSTOM_ELEMENTS_SCHEMA, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-gallery',
@@ -8,8 +8,16 @@ import { AfterViewInit, Component, ElementRef, Input, ViewChild, CUSTOM_ELEMENTS
   styleUrl: './gallery.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class GalleryComponent {
-  numOfSlides: number = 1;
+export class GalleryComponent implements OnInit {
+  numOfSlides: number | undefined;
+
+  // ngAfterViewInit(): void {
+  //   this.checkScreen(window.innerWidth);
+  // }
+
+  ngOnInit(): void {
+    this.checkScreen(window.innerWidth);
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
